@@ -1,0 +1,99 @@
+:root {
+    font-size: 16px;
+    --primary-color: ;
+    --secondary-color: ;
+} @media (max-width: 1024px) { /* Tablet Landscape */
+    :root {
+        font-size: 10px;
+    }
+} @media (max-width: 768px) { /* Tablet Portrait */
+    :root {
+        font-size: 13px;
+    }
+} @media (max-width: 480px) { /* Phone */
+    :root {
+        font-size: 8px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Components */
+
+.cta-button {
+    height: fit-content;
+    width: 9em;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    background-color: #FF1818;
+    border-radius: 0.3em;
+    
+}
+
+
+/* Hero Section */
+
+.hero {
+    padding: 0;
+    margin: 0;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    background-color: #C01414;
+}
+
+.hero h1, .hero span, .hero p {
+    margin: 0;
+    padding: 0;
+}
+
+#hero-content.hero {
+    left: 0;
+    bottom: 0;
+    margin: clamp(2em, 8em, 10em);
+    height: 30em;
+    max-width: 35em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    position: absolute;
+    justify-content: center;
+    color: #FFF;
+}
+
+.hero span {
+    font-family: 'Strong', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9em;
+}
+
+.hero h1 {
+    font-family: 'Energy', sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.75;
+    letter-spacing: 0.1rem;
+}
+
+.hero p {
+    margin: 2em 0 3em 0;
+    width: 20em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
