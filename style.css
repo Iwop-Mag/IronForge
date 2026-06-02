@@ -34,11 +34,117 @@ a {
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 500;
     text-align: center;
     background-color: #FF1818;
     border-radius: 0.3em;
-    
+}
+
+.header {
+    font-family: 'Strong', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    /* align-self: center; */
+}
+
+.header span {
+    color: #C01414;
+}
+
+.description {
+    margin: 2em 0 3em 0;
+    width: 20em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.header4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Navigation Bar */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 5em;
+    margin-left: 2em;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 1.5em;
+    box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 1);
+    z-index: 100;
+}
+
+.nav-home-button {
+    margin-left: 5em;
+    margin-bottom: 0.3em;
+}
+
+.nav-logo-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.nav-logo-stack {
+    height: 2em;
+    margin-bottom: 1.4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5em;
+    color: #FFF;
+}
+
+#nav-IF {
+    font-family: 'Energy', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+#nav-FC {
+    font-family: 'Strong', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#nav-logo {
+    height: 3.4em;
+    width: 3em;
+}
+
+.nav-links {
+    margin-right: 2em;
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav-link-item {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.nav-cta {
+    padding: 0.1em 1em 0.1em 1em;
+    font-size: 1.3em;
+    background-color: #C01414;
+    border-radius: 0.5em;
 }
 
 
@@ -50,7 +156,12 @@ a {
     height: 100dvh;
     width: 100%;
     display: flex;
+    background-image: url("assets/hero-bg.jpg");
     background-color: #C01414;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
 }
 
 .hero h1, .hero span, .hero p {
@@ -58,7 +169,7 @@ a {
     padding: 0;
 }
 
-#hero-content.hero {
+#hero-content {
     left: 0;
     bottom: 0;
     margin: clamp(2em, 8em, 10em);
@@ -76,7 +187,7 @@ a {
     font-family: 'Strong', sans-serif;
     font-size: 4.5rem;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: lowercase;
     line-height: 0.9em;
 }
 
@@ -89,11 +200,382 @@ a {
     letter-spacing: 0.1rem;
 }
 
-.hero p {
-    margin: 2em 0 3em 0;
-    width: 20em;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
+#hero-image-container {
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+    max-width: 40em;
+    height: 45em;
+    overflow: hidden;
+    transform: scale(0.85);
 }
 
+#hero-image {
+    transform: scale(0.8);
+    margin-left: -40em;
+    margin-top: -11em;
+}
+
+#p-hero {
+    margin: 2em 0 3em 0;
+}
+
+/* Facilities Section */
+
+.facilities {
+    display: flex;
+    flex-direction: column;
+    width: 70em;
+    margin: 5em auto 10em auto;
+    background-color: #FFF;
+}
+
+.facilities p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 23em;
+}
+
+.facilities-images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.fic-top-row, .fic-bot-row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.fic-gym, .fic-martial-arts,
+.fic-dance-studio, .fic-lockers, .fic-lavatories {
+    height: 16em;
+    background-color: #FFF;
+    border: 0.4em solid #C01414;
+    border-radius: 2em;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.fic-gym, .fic-martial-arts {
+    width: 40em;
+}
+
+.fic-dance-studio, .fic-lockers, .fic-lavatories {
+    width: 40em;
+}
+
+#h-facilities {
+    align-self: center;
+}
+
+/* Activities Section */
+
+.activities {
+    height: fit-content;
+    background-color: #000;
+}
+
+.activities-header {
+    max-width: 70em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+#p-activities {
+    text-align: right;
+}
+
+#h-activities {
+    width: 10em;
+    line-height: 0.8em;
+}
+
+.activities-carousel {
+    height: 30em;
+    margin: 2em auto 5em auto;
+    background-color: green;
+}
+
+#cta-activities {
+    display: block;
+    padding: 0.1em 1em 0.1em 1em;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+/* Services Section */
+
+.services {
+    padding-top: 10em;
+    height: 50em;
+    background-color: #000;
+}
+
+.services-content-container {
+    width: 50em;
+    display: flex;
+    flex-direction: column;
+    border: 0.1em solid #FFF;
+    border-radius: 3em;
+    margin: 0 auto;
+    padding: 3em 0 3em 0;
+}
+
+#h-services {
+    align-self: center;
+    color: #FFF;
+}
+
+.services-cards {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5em;
+}
+
+.services-card-left h4, .services-card-right h4 {
+    margin: 0;
+}
+
+
+#sub.description {
+    margin: 0;
+    display: block;
+    text-align: left;
+    width: 13em;
+    font-size: 0.8rem;
+}
+
+.services-card-left, .services-card-right {
+    position: relative;
+    padding: 3em 2em 5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    background-color: #FFF;
+    border-radius: 1em;
+    gap: 1.2rem;
+}
+
+.card-logo {
+    position: absolute;
+    top: -1.6em;
+    left: 5.2em;
+    width: 4em;
+    height: 4em;
+    background-color: #FF1818;
+    border-radius: 50em;
+}
+
+.card-logo img{
+    width: 2.3em;
+    height: 2.3em;
+    margin: 0.8em auto;
+}
+
+#cta-services {
+    margin: 2em auto 1.3em auto;
+    display: block;
+}
+
+/* Call to Action Section */
+
+.cta-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    max-width: 60em;
+    margin: 10em auto -5em auto;
+    padding: 5em 5em 12em 5em;
+    border: 0.3em solid #212121;
+    border-radius: 3em;
+    z-index: -1;
+}
+
+.call-to-action-buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1em;
+}
+
+#call-to-action {
+    display: block;
+}
+
+#cta-secondary {
+    height: fit-content;
+    width: 9em;
+    color: #FF1818;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    border: 0.1em solid #FF1818;
+    border-radius: 0.3em;
+}
+
+#h-cta, #p-cta {
+    margin: 0;
+    color: #212121;
+}
+
+#p-cta {
+    width: 24em;
+}
+
+/* Footer */
+
+.footer {
+    height: 28em;
+    background-color: #212121;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+}
+
+.foot-container {
+    margin: 0 auto;
+    padding: 2em 0 0 0;
+    max-width: 70em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.foot-logo-container {
+    max-width: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-logo-container img {
+    width: 3em;
+    height: 3.5em;
+}
+
+#foot-if {
+    margin: 0;
+    font-family: 'Energy', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+}
+
+#foot-fc {
+    margin: 0;
+    font-family: 'Strong', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+}
+
+.foot-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+    text-align: right;
+}
+
+.foot-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    text-decoration: none;
+    
+}
+
+.foot-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.foot-right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1em;
+}
+
+.foot-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Responsive stuff */
+@media (max-width: 1024px) { /* Tablet Landscape */
+    
+} @media (max-width: 768px) { /* Tablet Portrait */
+    
+} @media (max-width: 480px) { /* Phone */
+    #hero-image-container {
+        transform: scale(0.8);
+        left: 3.5em;
+    }
+    #hero-image {
+        transform: scale(0.41);
+        margin-top: -45em;
+        margin-left: -100em;
+    }
+    .nav-links {
+        display: none;
+    }
+    .services-content-container {
+        width: 90%;
+    }
+    .facilities {
+        width: 90%;
+    }
+    .facilities-images-container {
+        max-height: 90%;
+    }
+    .fic-gym, .fic-martial-arts,
+    .fic-dance-studio, .fic-lockers, .fic-lavatories {
+    height: 10em;
+    }
+
+    .activities-header {
+        padding-top: 5em;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #h-activities {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+
+     #p-activities {
+        display: flex;
+        margin: 0.5em auto 2em 11.5em;
+        width: 50%;
+        text-align: left;
+    }
+
+    .cta-content-container {
+        width: 88%;
+        padding: 3em 2em 8em 2em;
+    }
+
+    .foot-container {
+        max-width: 90%;
+    }
+}

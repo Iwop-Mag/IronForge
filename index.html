@@ -12,14 +12,14 @@
     <!-- <meta property="og:url" content="https://placeholder" /> -->
     <meta property="og:title" content="PrimePath Website Design and Development" />
     <meta property="og:description" content="Upgrade your website to fit your target market with the latest trends and aesthetics. We also offer e-commerce setup for Facebook and more!" />
-    <meta property="og:image" content="images\logo\iron-forge.png" alt="Iron Forge FavIcon" />
+    <meta property="og:image" content="assets\logo\iron-forge.png" alt="Iron Forge FavIcon" />
 
     <link href="https://fonts.cdnfonts.com/css/energy" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/strong" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="images\logo\iron-forge.png">
+    <link rel="icon" type="image/svg+xml" href="assets\logo\iron-forge.png">
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
@@ -31,21 +31,137 @@
     <title>Homepage | IronForge  -  PrimePath Sample Site</title>
 </head>
 <body>
-    <nav></nav>
+    <header class="nav-bar">
+        <a href="#" class="nav-home-button">
+            <div class="nav-logo-button">
+                <img src="assets\logo\iron-forge.png" id="nav-logo" alt="Iron Forge logo">
+                <div class="nav-logo-stack">
+                    <p id="nav-IF">Iron Forge</p>
+                    <p id="nav-FC">Fitness Center</p>
+                </div>
+            </div>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link-item">Our Team</a></li>
+                <li><a href="#" class="nav-link-item">Locations</a></li>
+                <li><a href="#" class="nav-link-item">Services</a></li>
+                <li><a href="#" class="nav-link-item">Rates</a></li>
+                <li><div class="nav-cta-div"><a href="#" class="nav-cta">Join Us</a></div></li>
+            </ul>
+        </nav>
+    </header>
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main id="main-content">
                 <section class="hero">
-                    <div class="hero" id="hero-content">
+                    <div id="hero-content">
                         <span>Be The</span>
                         <h1>Better You</h1>
-                        <p>The prime fitness center to forge your health, physique, and well-being into iron.</p>
+                        <p class="description" id="p-hero">The prime fitness center to forge your health, physique, and well-being into iron.</p>
                         <a class="cta-button" id="cta-hero" href="#">Try Iron Forge</a>
+                    </div>
+                    <div id="hero-image-container">
+                        <img src="assets\hero-image.png" id="hero-image">
+                    </div>
+                </section>
+                <section class="facilities">
+                    <h2 class="header" id="h-facilities">Facilities that <span>Fit</span> You</h2>
+                    <div class="facilities-images-container">
+                        <div class="fic-top-row">
+                            <div class="fic-gym"></div>
+                            <div class="fic-martial-arts"></div>
+                        </div>
+                        <div class="fic-bot-row">
+                            <div class="fic-dance-studio"></div>
+                            <div class="fic-lockers"></div>
+                            <div class="fic-lavatories"></div>
+                        </div>
+                    </div>
+                    <p class="description">Catered to fit client needs and demands. Constructed for transformation and determination.</p>
+                    <a class="cta-button" id="cta-facilities" href="#">Book a Tour</a>
+                </section>
+                <section class="activities">
+                    <div class="activities-header">
+                        <h2 class="header" id="h-activities">Activities that <span>Transform</span> You</h2>
+                        <p class="description" id="p-activities">Tailored according to your needs. Specialized for maximum effectivity.</p>
+                    </div>
+                    <div class="activities-carousel"></div>
+                    <a class="cta-button" id="cta-activities" href="#">Attend a Session</a>
+                </section>
+                <section class="services">
+                    <div class="services-content-container">
+                        <h2 class="header" id="h-services">Services that <span>Improve</span> You</h2>
+                        <div class="services-cards">
+                            <div class="services-card-left">
+                                <div class="card-logo">
+                                    <img src="assets\fitness_center_70dp_FFFFFF_FILL0_wght500_GRAD0_opsz48.png">
+                                </div>
+                                <h4 class="header4">Training Plan</h4>
+                                <p class="description" id="sub">Coaches will forge you a perfect training plan tailored to what you aspire to change and improve.</p>
+                            </div>
+                            <div class="services-card-right">
+                                <div class="card-logo">
+                                    <img src="assets\fork_spoon_70dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png">
+                                </div>
+                                <h4 class="header4">Diet Nutrition</h4>
+                                <p class="description" id="sub">Certified nutritionists to forge you a diet fit for your lifestyle improvement and target transformation.</p>
+                            </div>
+                        </div>
+                        <a class="cta-button" id="cta-services" href="#">Consult for Free</a>
+                    </div>
+                </section>
+                <section class="call-to-action">
+                    <div class="cta-content-container">
+                        <h2 class="header" id="h-cta">Start Forging your Body</h2>
+                        <p class="description" id="p-cta">Hundreds of people transformed through Iron Forge. It's time for your transformation.</p>
+                        <div class="call-to-action-buttons">
+                            <a class="cta-button" id="call-to-action" href="#">Join Us</a>
+                            <a class="sec-cta-button" id="cta-secondary" href="#"> Membership</a>
+                        </div>
                     </div>
                 </section>
             </main>
+            <footer class="footer">
+                <div class="foot-container">
+                    <div class="foot-left">
+                        <div class="foot-logo-container">
+                            <img src="assets\logo\nav-logo.png" alt="Iron Forge Logo">
+                            <span id="foot-if">Iron Forge</span>
+                            <span id="foot-fc">Fitness Center</span>
+                        </div>
+                        <p>© 2026 Iron Forge. All rights reserved.</p>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="foot-right">
+                        <div>
+                            <p class="foot-header">Visit</p>
+                            <ul  class="foot-links">
+                                <li><a class="footer-link" href="#">Home</a></li>
+                                <li><a class="footer-link" href="#">Facilities</a></li>
+                                <li><a class="footer-link" href="#">Services</a></li>
+                                <li><a class="footer-link" href="#">Membership</a></li>
+                                <li><a class="footer-link" href="#">About us</a></li>
+                                <li><a class="footer-link" href="#">Our team</a></li>
+                            </ul>
+                        </div>
+                        <div class="foot-right-content">
+                            <div>
+                                <p class="foot-header">Get in Touch</p>
+                                <a href="mailto:contact@ironforge.com">contact@ironforge.com</a>
+                            </div>
+                            <div class="foot-socials">
+                                <p class="foot-header">Our Socials</p>
+                                <a href="#" target="_blank">Facebook</a>
+                                <a href="#" target="_blank">Instagram</a>
+                                <a href="#" target="_blank">TikTok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-    <footer></footer>
 </body>
 </html>
