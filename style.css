@@ -146,6 +146,41 @@ a {
     border-radius: 0.5em;
 }
 
+/* ========== HAMBURGER MENU ========== */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    z-index: 110;
+}
+
+.hamburger span {
+    display: block;
+    width: 1.8em;
+    height: 0.2em;
+    background: #FFF;
+    border-radius: 0.1em;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0.4em, 0.4em);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(0.4em, -0.4em);
+}
+
 /* ========== HERO SECTION ========== */
 
 .hero {
@@ -210,9 +245,10 @@ a {
 }
 
 #hero-image {
-    transform: scale(0.8);
-    margin-left: -40em;
-    margin-top: -11em;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #p-hero {
@@ -861,12 +897,33 @@ a {
         font-size: 12px;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;
+        background: #212121;
+        z-index: 105;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 
     .nav-bar {
-        justify-content: center;
+        justify-content: space-between;
         padding: 0 1em;
     }
 
@@ -896,13 +953,8 @@ a {
         right: auto;
         top: auto;
         max-width: 100%;
-        height: auto;
+        height: 25em;
         transform: scale(0.7);
-    }
-
-    #hero-image {
-        margin-left: -30em;
-        margin-top: -8em;
     }
 
     .activities-header {
@@ -989,11 +1041,7 @@ a {
 
     #hero-image-container {
         transform: scale(0.5);
-    }
-
-    #hero-image {
-        margin-left: -25em;
-        margin-top: -6em;
+        height: 20em;
     }
 
     .carousel,
