@@ -31,6 +31,7 @@
     <title>Homepage | IronForge  -  PrimePath Sample Site</title>
 </head>
 <body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
     <header class="nav-bar">
         <a href="#" class="nav-home-button">
             <div class="nav-logo-button">
@@ -41,17 +42,17 @@
                 </div>
             </div>
         </a>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#" class="nav-link-item">Our Team</a></li>
-                <li><a href="#" class="nav-link-item">Locations</a></li>
-                <li><a href="#" class="nav-link-item">Services</a></li>
-                <li><a href="#" class="nav-link-item">Rates</a></li>
+                <li><a href="our-team.html" class="nav-link-item">Our Team</a></li>
+                <li><a href="locations.html" class="nav-link-item">Locations</a></li>
+                <li><a href="services.html" class="nav-link-item">Services</a></li>
+                <li><a href="rates.html" class="nav-link-item">Rates</a></li>
                 <li><div class="nav-cta-div"><a href="#" class="nav-cta">Join Us</a></div></li>
             </ul>
         </nav>
@@ -74,25 +75,25 @@
                     <h2 class="header" id="h-facilities">Facilities that <span>Fit</span> You</h2>
                     <div class="facilities-images-container">
                         <div class="fic-top-row">
-                            <div class="fic-gym">
+                            <div class="fic-gym" role="img" aria-label="Gym facility">
                                 <img src="assets\ai-gym.png" alt="Gym">
                                 <h4 class="header4">Gym</h4>
                             </div>
-                            <div class="fic-martial-arts">
+                            <div class="fic-martial-arts" role="img" aria-label="Martial Arts room">
                                 <img src="assets\ai-martial-arts-room.png" alt="Martial Arts">
                                 <h4 class="header4">Martial Arts</h4>
                             </div>
                         </div>
                         <div class="fic-bot-row">
-                            <div class="fic-dance-studio">
+                            <div class="fic-dance-studio" role="img" aria-label="Dance Studio">
                                 <img src="assets\ai-dance-studio.png" alt="Dance Studio">
                                 <h4 class="header4">Dance Studio</h4>
                             </div>
-                            <div class="fic-lockers">
+                            <div class="fic-lockers" role="img" aria-label="Lockers facility">
                                 <img src="assets\ai-lockers.png" alt="Lockers">
                                 <h4 class="header4">Lockers</h4>
                             </div>
-                            <div class="fic-lavatories">
+                            <div class="fic-lavatories" role="img" aria-label="Lavatories">
                                 <img src="assets\ai-lavatories.png" alt="Lavatories">
                                 <h4 class="header4">Lavatories</h4>
                             </div>
@@ -108,36 +109,36 @@
                     </div>
                     <div class="activities-carousel">
 
-                        <div class="carousel" mask>
-                            <article>
+                        <div class="carousel" mask role="region" aria-label="Activities carousel row 1" aria-roledescription="carousel">
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-group-class.png" alt="Group Class">
                                     <h3>Group Class</h3>
                                 </a>
                             </article>
                             
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-fitness.png" alt="Fitness">
                                     <h3>Fitness</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-friendly-competes.png" alt="Friendly Competitions">
                                     <h3>Friendly Competes</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-nutrition.png" alt="Nutrition Advisories">
                                     <h3>Nutrition Advisories</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-running.png" alt="Running">
                                     <h3>Running</h3>
@@ -145,36 +146,36 @@
                             </article>
                         </div>
 
-                        <div class="carousel-2" mask>
-                            <article>
+                        <div class="carousel-2" mask role="region" aria-label="Activities carousel row 2" aria-roledescription="carousel">
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-routine-of-the-day.png" alt="Group Class">
                                     <h3>Routine of the Day</h3>
                                 </a>
                             </article>
                             
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-boxing.png" alt="Fitness">
                                     <h3>Boxing</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-muay-thai.png" alt="Friendly Competitions">
                                     <h3>Muay Thai</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-endurance-training.png" alt="Nutrition Advisories">
                                     <h3>Endurance Training</h3>
                                 </a>
                             </article>
 
-                            <article>
+                            <article role="group" aria-roledescription="slide">
                                 <a href="#">
                                     <img src="assets\ai-competition-training.png" alt="Running">
                                     <h3>Competition Trainings</h3>
@@ -241,7 +242,7 @@
                         <a href="#">Terms of Service</a>
                     </div>
                     <div class="foot-right">
-                        <div>
+                        <nav aria-label="Footer navigation">
                             <p class="foot-header">Visit</p>
                             <ul  class="foot-links">
                                 <li><a class="footer-link" href="#">Home</a></li>
@@ -251,7 +252,7 @@
                                 <li><a class="footer-link" href="#">About us</a></li>
                                 <li><a class="footer-link" href="#">Our team</a></li>
                             </ul>
-                        </div>
+                        </nav>
                         <div class="foot-right-content">
                             <div>
                                 <p class="foot-header">Get in Touch</p>

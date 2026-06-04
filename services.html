@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Services | Iron Forge Fitness Center" />
+    <meta name="description" content="Comprehensive fitness services at Iron Forge: training plans, diet nutrition, personal training, group classes, and recovery programs tailored for you." />
+    <meta name="keywords" content="gym services, personal training, nutrition plans, fitness programs, recovery" />
+    <meta name="author" content="PrimePath, Paul Magalong, Micah Garcia" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Services | Iron Forge Fitness Center" />
+    <meta property="og:description" content="Comprehensive fitness services at Iron Forge." />
+    <meta property="og:image" content="assets\logo\iron-forge.png" alt="Iron Forge FavIcon" />
+    <link href="https://fonts.cdnfonts.com/css/energy" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/strong" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets\logo\iron-forge.png">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
+    <script src="index.js" defer></script>
+    <title>Services | Iron Forge Fitness Center</title>
+</head>
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header class="nav-bar">
+        <a href="index.html" class="nav-home-button">
+            <div class="nav-logo-button">
+                <img src="assets\logo\iron-forge.png" id="nav-logo" alt="Iron Forge logo">
+                <div class="nav-logo-stack">
+                    <p id="nav-IF">Iron Forge</p>
+                    <p id="nav-FC">Fitness Center</p>
+                </div>
+            </div>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="our-team.html" class="nav-link-item">Our Team</a></li>
+                <li><a href="locations.html" class="nav-link-item">Locations</a></li>
+                <li><a href="services.html" class="nav-link-item nav-active">Services</a></li>
+                <li><a href="rates.html" class="nav-link-item">Rates</a></li>
+                <li><div class="nav-cta-div"><a href="#" class="nav-cta">Join Us</a></div></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main id="main-content">
+                <section class="page-hero">
+                    <h1>Our Services</h1>
+                    <p>Comprehensive fitness solutions designed to forge your body, sharpen your mind, and elevate your performance.</p>
+                </section>
+                <section class="services-page-section">
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <img src="assets\fitness_center_70dp_FFFFFF_FILL0_wght500_GRAD0_opsz48.png" alt="Training icon">
+                        </div>
+                        <div class="service-detail-info">
+                            <h3>Training Plan</h3>
+                            <p>Our certified coaches assess your current fitness level, discuss your goals, and build a customized training program. Every plan includes:</p>
+                            <ul>
+                                <li>Initial fitness assessment and body composition analysis</li>
+                                <li>Custom workout programming updated every 4 weeks</li>
+                                <li>Form correction and technique coaching</li>
+                                <li>Progress tracking with monthly check-ins</li>
+                                <li>Access to exclusive Iron Forge workout app</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <img src="assets\fork_spoon_70dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt="Nutrition icon">
+                        </div>
+                        <div class="service-detail-info">
+                            <h3>Diet &amp; Nutrition</h3>
+                            <p>Our certified nutritionists create science-backed meal plans tailored to your lifestyle, preferences, and fitness objectives. Includes:</p>
+                            <ul>
+                                <li>Personalized macro and micronutrient targets</li>
+                                <li>Weekly meal plans with recipes and shopping lists</li>
+                                <li>Supplement guidance and timing optimization</li>
+                                <li>Allergy and dietary restriction accommodations</li>
+                                <li>Bi-weekly nutrition coaching calls</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="services-page-dark">
+                    <div class="services-page-section" style="margin: 0 auto;">
+                        <div class="service-detail-card">
+                            <div class="service-icon">
+                                <img src="assets\fitness_center_70dp_FFFFFF_FILL0_wght500_GRAD0_opsz48.png" alt="Personal Training icon">
+                            </div>
+                            <div class="service-detail-info">
+                                <h3>Personal Training</h3>
+                                <p>One-on-one sessions with our elite coaches who provide undivided attention to your form, intensity, and progress.</p>
+                                <ul>
+                                    <li>60-minute dedicated sessions</li>
+                                    <li>Real-time form feedback and adjustment</li>
+                                    <li>Accountability and motivation support</li>
+                                    <li>Flexible scheduling &mdash; morning, afternoon, or evening</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-detail-card">
+                            <div class="service-icon">
+                                <img src="assets\fork_spoon_70dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt="Group Classes icon">
+                            </div>
+                            <div class="service-detail-info">
+                                <h3>Group Classes</h3>
+                                <p>High-energy classes led by passionate instructors. From HIIT to calming yoga flows &mdash; there is a class for every mood and goal.</p>
+                                <ul>
+                                    <li>HIIT, Boxing, Muay Thai, Yoga, and Spin</li>
+                                    <li>20+ classes daily across all locations</li>
+                                    <li>All fitness levels welcome with modifications provided</li>
+                                    <li>Class reservations via the Iron Forge app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-detail-card">
+                            <div class="service-icon">
+                                <img src="assets\fitness_center_70dp_FFFFFF_FILL0_wght500_GRAD0_opsz48.png" alt="Recovery icon">
+                            </div>
+                            <div class="service-detail-info">
+                                <h3>Recovery &amp; Physio</h3>
+                                <p>Recover smarter and train longer. Our recovery services help prevent injury, reduce soreness, and keep you performing at your best.</p>
+                                <ul>
+                                    <li>Sports massage and myofascial release</li>
+                                    <li>Cryotherapy and contrast therapy</li>
+                                    <li>Physical therapy and injury rehab</li>
+                                    <li>Stretching and mobility clinics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section style="text-align: center; padding: 4em 2em 6em 2em;">
+                    <h2 class="header">Ready to <span>Start</span>?</h2>
+                    <p class="description" style="margin: 1.5em auto 2em auto;">Book a free consultation and discover which services are right for you.</p>
+                    <a class="cta-button" href="#">Consult for Free</a>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="foot-container">
+                    <div class="foot-left">
+                        <div class="foot-logo-container">
+                            <img src="assets\logo\nav-logo.png" alt="Iron Forge Logo">
+                            <span id="foot-if">Iron Forge</span>
+                            <span id="foot-fc">Fitness Center</span>
+                        </div>
+                        <p>&copy; 2026 Iron Forge. All rights reserved.</p>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="foot-right">
+                        <nav aria-label="Footer navigation">
+                            <p class="foot-header">Visit</p>
+                            <ul class="foot-links">
+                                <li><a class="footer-link" href="index.html">Home</a></li>
+                                <li><a class="footer-link" href="#">Facilities</a></li>
+                                <li><a class="footer-link" href="services.html">Services</a></li>
+                                <li><a class="footer-link" href="rates.html">Membership</a></li>
+                                <li><a class="footer-link" href="#">About us</a></li>
+                                <li><a class="footer-link" href="our-team.html">Our team</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot-right-content">
+                            <div>
+                                <p class="foot-header">Get in Touch</p>
+                                <a href="mailto:contact@ironforge.com">contact@ironforge.com</a>
+                            </div>
+                            <div class="foot-socials">
+                                <p class="foot-header">Our Socials</p>
+                                <a href="#" target="_blank">Facebook</a>
+                                <a href="#" target="_blank">Instagram</a>
+                                <a href="#" target="_blank">TikTok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

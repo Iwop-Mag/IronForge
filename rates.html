@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Rates | Iron Forge Fitness Center" />
+    <meta name="description" content="Explore Iron Forge membership tiers and rates. From Basic to Elite — find the plan that matches your fitness goals and budget." />
+    <meta name="keywords" content="gym membership, fitness rates, Iron Forge pricing, gym plans" />
+    <meta name="author" content="PrimePath, Paul Magalong, Micah Garcia" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rates | Iron Forge Fitness Center" />
+    <meta property="og:description" content="Explore Iron Forge membership tiers and rates." />
+    <meta property="og:image" content="assets\logo\iron-forge.png" alt="Iron Forge FavIcon" />
+    <link href="https://fonts.cdnfonts.com/css/energy" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/strong" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets\logo\iron-forge.png">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
+    <script src="index.js" defer></script>
+    <title>Rates | Iron Forge Fitness Center</title>
+</head>
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <header class="nav-bar">
+        <a href="index.html" class="nav-home-button">
+            <div class="nav-logo-button">
+                <img src="assets\logo\iron-forge.png" id="nav-logo" alt="Iron Forge logo">
+                <div class="nav-logo-stack">
+                    <p id="nav-IF">Iron Forge</p>
+                    <p id="nav-FC">Fitness Center</p>
+                </div>
+            </div>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="our-team.html" class="nav-link-item">Our Team</a></li>
+                <li><a href="locations.html" class="nav-link-item">Locations</a></li>
+                <li><a href="services.html" class="nav-link-item">Services</a></li>
+                <li><a href="rates.html" class="nav-link-item nav-active">Rates</a></li>
+                <li><div class="nav-cta-div"><a href="#" class="nav-cta">Join Us</a></div></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main id="main-content">
+                <section class="page-hero">
+                    <h1>Membership Rates</h1>
+                    <p>Choose the plan that fits your goals. Every membership includes access to premium facilities and a welcoming community.</p>
+                </section>
+                <section class="rates-grid">
+                    <div class="rate-card">
+                        <p class="tier-name">Basic</p>
+                        <p class="price">$29<span>/mo</span></p>
+                        <ul class="features">
+                            <li>Gym floor access</li>
+                            <li>Locker room use</li>
+                            <li>1 group class per week</li>
+                            <li>Standard hours access</li>
+                        </ul>
+                        <a class="cta-button" href="#">Get Started</a>
+                    </div>
+                    <div class="rate-card">
+                        <p class="tier-name">Standard</p>
+                        <p class="price">$49<span>/mo</span></p>
+                        <ul class="features">
+                            <li>Everything in Basic</li>
+                            <li>Unlimited group classes</li>
+                            <li>1 personal training session/mo</li>
+                            <li>Extended hours access</li>
+                            <li>Nutrition starter guide</li>
+                        </ul>
+                        <a class="cta-button" href="#">Get Started</a>
+                    </div>
+                    <div class="rate-card recommended">
+                        <p class="tier-name">Premium</p>
+                        <p class="price">$79<span>/mo</span></p>
+                        <ul class="features">
+                            <li>Everything in Standard</li>
+                            <li>4 personal training sessions/mo</li>
+                            <li>Custom diet &amp; nutrition plan</li>
+                            <li>24/7 facility access</li>
+                            <li>Priority class reservations</li>
+                            <li>Quarterly fitness assessment</li>
+                            <li>Guest passes (2 per month)</li>
+                        </ul>
+                        <a class="cta-button" href="#">Get Started</a>
+                    </div>
+                    <div class="rate-card">
+                        <p class="tier-name">Elite</p>
+                        <p class="price">$129<span>/mo</span></p>
+                        <ul class="features">
+                            <li>Everything in Premium</li>
+                            <li>Unlimited personal training</li>
+                            <li>Recovery &amp; physio sessions</li>
+                            <li>Exclusive Elite locker lounge</li>
+                            <li>Monthly body composition scan</li>
+                            <li>Competition prep support</li>
+                            <li>Unlimited guest passes</li>
+                            <li>Dedicated coach concierge</li>
+                        </ul>
+                        <a class="cta-button" href="#">Get Started</a>
+                    </div>
+                </section>
+                <section class="comparison-table-wrapper">
+                    <h3>Feature Comparison</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Basic</th>
+                                <th>Standard</th>
+                                <th>Premium</th>
+                                <th>Elite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Gym floor access</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td></tr>
+                            <tr><td>Group classes</td><td>1 / week</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
+                            <tr><td>Personal training</td><td>&mdash;</td><td>1 / month</td><td>4 / month</td><td>Unlimited</td></tr>
+                            <tr><td>Nutrition plan</td><td>&mdash;</td><td>Starter</td><td>Custom</td><td>Custom</td></tr>
+                            <tr><td>Facility access</td><td>Standard hours</td><td>Extended hours</td><td>24/7</td><td>24/7</td></tr>
+                            <tr><td>Guest passes</td><td>&mdash;</td><td>&mdash;</td><td>2 / month</td><td>Unlimited</td></tr>
+                            <tr><td>Recovery &amp; physio</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&check;</td></tr>
+                            <tr><td>Elite locker lounge</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&check;</td></tr>
+                            <tr><td>Competition prep</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&check;</td></tr>
+                            <tr><td>Coach concierge</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&check;</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="foot-container">
+                    <div class="foot-left">
+                        <div class="foot-logo-container">
+                            <img src="assets\logo\nav-logo.png" alt="Iron Forge Logo">
+                            <span id="foot-if">Iron Forge</span>
+                            <span id="foot-fc">Fitness Center</span>
+                        </div>
+                        <p>&copy; 2026 Iron Forge. All rights reserved.</p>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="foot-right">
+                        <nav aria-label="Footer navigation">
+                            <p class="foot-header">Visit</p>
+                            <ul class="foot-links">
+                                <li><a class="footer-link" href="index.html">Home</a></li>
+                                <li><a class="footer-link" href="#">Facilities</a></li>
+                                <li><a class="footer-link" href="services.html">Services</a></li>
+                                <li><a class="footer-link" href="rates.html">Membership</a></li>
+                                <li><a class="footer-link" href="#">About us</a></li>
+                                <li><a class="footer-link" href="our-team.html">Our team</a></li>
+                            </ul>
+                        </nav>
+                        <div class="foot-right-content">
+                            <div>
+                                <p class="foot-header">Get in Touch</p>
+                                <a href="mailto:contact@ironforge.com">contact@ironforge.com</a>
+                            </div>
+                            <div class="foot-socials">
+                                <p class="foot-header">Our Socials</p>
+                                <a href="#" target="_blank">Facebook</a>
+                                <a href="#" target="_blank">Instagram</a>
+                                <a href="#" target="_blank">TikTok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -23,6 +23,11 @@ a {
     color: inherit;
 }
 
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
 /* ========== COMPONENTS ========== */
 
 .cta-button {
@@ -30,7 +35,7 @@ a {
     height: fit-content;
     width: auto;
     min-width: 9em;
-    padding: 0.1em 1em;
+    padding: 0.4em 1.2em;
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
@@ -65,6 +70,47 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 1em;
+    padding: 0.6em 1.2em;
+    background: #FF1818;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    border-radius: 0 0 0.5em 0.5em;
+    z-index: 200;
+    transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+:focus-visible {
+    outline: 3px solid #FF1818;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.cta-button:focus-visible {
+    outline-color: #FFF;
+    outline-offset: 4px;
+}
+
+.nav-link-item:focus-visible,
+.nav-cta:focus-visible {
+    outline-color: #FF1818;
+    outline-offset: 4px;
+}
+
+.footer-link:focus-visible,
+.foot-right a:focus-visible {
+    outline-color: #FF1818;
+    outline-offset: 2px;
 }
 
 /* ========== NAVIGATION BAR ========== */
@@ -140,7 +186,7 @@ a {
 }
 
 .nav-cta {
-    padding: 0.1em 1em;
+    padding: 0.3em 0.9em;
     font-size: 1.3em;
     background-color: #C01414;
     border-radius: 0.5em;
@@ -150,13 +196,16 @@ a {
 
 .hamburger {
     display: none;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     gap: 0.35em;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5em;
+    padding: 0.6em;
+    min-width: 44px;
+    min-height: 44px;
     z-index: 110;
 }
 
@@ -195,7 +244,6 @@ a {
     background-position: center;
     background-size: cover;
     z-index: 0;
-    overflow: hidden;
 }
 
 .hero h1, .hero span, .hero p {
@@ -266,7 +314,6 @@ a {
     margin: 5em auto 10em auto;
     padding: 0 2em;
     z-index: 0;
-    overflow: hidden;
 }
 
 .facilities::before {
@@ -353,7 +400,7 @@ a {
     padding-bottom: 3em;
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 40%, #2a1a1a 70%, #0f0a0a 100%);
     z-index: 0;
-    overflow: hidden;
+    text-align: center;
 }
 
 .activities-background-gradient-blurs {
@@ -446,7 +493,7 @@ a {
 
 #cta-activities {
     display: block;
-    padding: 0.1em 1em;
+    padding: 0.4em 1.2em;
     font-weight: 500;
     margin: 0 auto;
     z-index: 1;
@@ -524,10 +571,10 @@ a {
     display: grid;
     grid-template-rows: 200px auto 1fr auto;
     gap: 0.25rem;
-    border: 1px solid light-dark(rgba(0 0 0 / 0.25), rgba(255 255 255 / 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.12);
     padding-block-end: 1rem;
     border-radius: 2em;
-    background: light-dark(white, rgba(255 255 255 / 0.05));
+    background: rgba(255, 255, 255, 0.04);
 
     will-change: transform;
     animation-name: marquee;
@@ -584,19 +631,18 @@ a {
     padding: 10em 2em 15em 2em;
     background: linear-gradient(180deg, #0f0a0a 0%, #0a0a0a 50%, #0a0a0a 100%);
     z-index: 0;
-    overflow: hidden;
 }
 
 .services-content-container {
     position: relative;
     width: 100%;
-    max-width: 50em;
+    max-width: 68em;
     display: flex;
     flex-direction: column;
-    border: 0.1em solid rgba(255, 255, 255, 0.2);
+    border: 0.15em solid rgba(255, 255, 255, 0.5);
     border-radius: 3em;
     margin: 0 auto;
-    padding: 3em 2em;
+    padding: 3em 3em;
     z-index: 1;
 }
 
@@ -717,7 +763,6 @@ a {
 .call-to-action {
     position: relative;
     z-index: 0;
-    overflow: hidden;
 }
 
 .cta-content-container {
@@ -749,7 +794,7 @@ a {
     display: inline-block;
     height: fit-content;
     min-width: 9em;
-    padding: 0.1em 1em;
+    padding: 0.4em 1.2em;
     color: #FF1818;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
@@ -769,6 +814,396 @@ a {
     max-width: 24em;
 }
 
+/* ========== SUB-PAGE STYLES ========== */
+
+.page-hero {
+    padding: 8em 2em 4em 2em;
+    text-align: center;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    color: #FFF;
+    margin-top: 5em;
+}
+
+.page-hero h1 {
+    font-family: 'Energy', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.page-hero p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    max-width: 30em;
+    margin: 1em auto 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link-item.nav-active {
+    color: #FF1818;
+    border-bottom: 2px solid #FF1818;
+    padding-bottom: 0.2em;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    max-width: 70em;
+    margin: 4em auto;
+    padding: 0 2em;
+}
+
+.trainer-card {
+    background: #FFF;
+    border-radius: 1.5em;
+    overflow: hidden;
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.15);
+    text-align: center;
+    padding-bottom: 2em;
+    border: 2px solid #e0e0e0;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+}
+
+.trainer-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    margin: 0.8em 0 0.2em;
+}
+
+.trainer-card .specialty {
+    color: #C01414;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5em;
+}
+
+.trainer-card .bio {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    padding: 0 1.5em;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+.locations-container {
+    max-width: 70em;
+    margin: 4em auto;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.location-card {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 2.5em;
+    border: 2px solid #e0e0e0;
+    border-radius: 1.5em;
+    background: #FFF;
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.08);
+}
+
+.location-info {
+    flex: 1;
+    min-width: 16em;
+}
+
+.location-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #C01414;
+    margin: 0 0 0.5em 0;
+}
+
+.location-info .address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.location-hours {
+    flex: 1;
+    min-width: 16em;
+}
+
+.location-hours h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 0 0 0.8em 0;
+    color: #212121;
+}
+
+.location-hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+}
+
+.location-hours td {
+    padding: 0.4em 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.location-hours td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.services-page-section {
+    max-width: 70em;
+    margin: 4em auto;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.service-detail-card {
+    display: flex;
+    gap: 2em;
+    padding: 2.5em;
+    background: #FFF;
+    border-radius: 1.5em;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+.service-icon {
+    flex-shrink: 0;
+    width: 5em;
+    height: 5em;
+    background: #FF1818;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 3em;
+    height: 3em;
+}
+
+.service-detail-info {
+    flex: 1;
+    min-width: 16em;
+}
+
+.service-detail-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #212121;
+    margin: 0 0 0.3em 0;
+}
+
+.service-detail-info p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.service-detail-info ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+    padding-left: 1.2em;
+    margin: 0.5em 0 0 0;
+}
+
+.service-detail-info ul li::marker {
+    color: #C01414;
+}
+
+.services-page-dark {
+    background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+    padding: 4em 0 6em 0;
+}
+
+.services-page-dark .service-detail-card {
+    background: #1a1a1a;
+    border-color: rgba(255,255,255,0.1);
+}
+
+.services-page-dark .service-detail-info h3 {
+    color: #FFF;
+}
+
+.services-page-dark .service-detail-info p,
+.services-page-dark .service-detail-info ul {
+    color: rgba(255,255,255,0.75);
+}
+
+.rates-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    max-width: 75em;
+    margin: 4em auto;
+    padding: 0 2em;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.rate-card {
+    flex: 1;
+    min-width: 14em;
+    max-width: 18em;
+    background: #FFF;
+    border: 2px solid #e0e0e0;
+    border-radius: 1.5em;
+    padding: 2em 1.5em;
+    text-align: center;
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.rate-card.recommended {
+    border-color: #FF1818;
+    box-shadow: 0 0 2em rgba(255,24,24,0.25);
+    transform: scale(1.04);
+}
+
+.rate-card.recommended::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF1818;
+    color: #FFF;
+    padding: 0.2em 1em;
+    border-radius: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rate-card .tier-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #212121;
+    margin: 0;
+}
+
+.rate-card .price {
+    font-family: 'Energy', sans-serif;
+    font-size: 3rem;
+    color: #C01414;
+    margin: 0.3em 0;
+}
+
+.rate-card .price span {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+}
+
+.rate-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 1.2em 0;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 2;
+}
+
+.rate-card .features li::before {
+    content: '\221A ';
+    color: #C01414;
+    font-weight: bold;
+}
+
+.comparison-table-wrapper {
+    max-width: 70em;
+    margin: 2em auto 6em auto;
+    padding: 0 2em;
+    overflow-x: auto;
+}
+
+.comparison-table-wrapper h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #212121;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    background: #FFF;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.08);
+}
+
+.comparison-table thead th {
+    background: #212121;
+    color: #FFF;
+    padding: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    border-bottom: 2px solid #C01414;
+}
+
+.comparison-table td {
+    padding: 0.8em 1em;
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .trainer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .trainer-card img { height: 12em; }
+    .page-hero h1 { font-size: 3rem; }
+    .location-card { flex-direction: column; gap: 1.5em; }
+    .rates-grid { flex-direction: column; align-items: center; }
+    .rate-card { max-width: 24em; width: 100%; }
+    .rate-card.recommended { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .trainer-grid { grid-template-columns: 1fr; }
+    .page-hero { padding: 6em 1em 3em 1em; }
+    .page-hero h1 { font-size: 2.5rem; }
+    .service-detail-card { padding: 1.5em; }
+    .service-icon { width: 4em; height: 4em; }
+    .service-icon img { width: 2.2em; height: 2.2em; }
+    .location-card { padding: 1.5em; }
+    .rate-card { padding: 1.5em 1.2em; }
+}
+
 /* ========== FOOTER ========== */
 
 .footer {
@@ -776,7 +1211,6 @@ a {
     font-family: 'Roboto', sans-serif;
     color: #FFF;
     padding: 4em 2em 2em 2em;
-    overflow: hidden;
 }
 
 .foot-container {
@@ -859,6 +1293,13 @@ a {
     gap: 1em;
 }
 
+/* ========== OVERFLOW GUARD ========== */
+
+.activities-carousel {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 1024px) {
@@ -929,15 +1370,22 @@ a {
 
     .hero {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;
+        padding: 5em 0 2em 0;
+        gap: 1.5em;
     }
 
     #hero-content {
         position: relative;
-        margin: 2em auto;
+        margin: 0;
+        padding: 0 1.5em;
         height: auto;
-        max-width: 90%;
+        max-width: 100%;
         align-items: center;
         text-align: center;
+        flex: none;
     }
 
     .hero h1 {
@@ -952,16 +1400,32 @@ a {
         position: relative;
         right: auto;
         top: auto;
-        max-width: 100%;
-        height: 25em;
-        transform: scale(0.7);
+        max-width: 20em;
+        width: 90%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        transform: none;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    #hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .activities {
+        padding: 3em 0 2em 0;
     }
 
     .activities-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 1em;
+        gap: 0.5em;
+        padding: 0 1em;
     }
 
     #h-activities {
@@ -972,17 +1436,68 @@ a {
     #p-activities {
         text-align: center;
         max-width: 100%;
+        margin: 0.5em 0 1.5em 0;
+    }
+
+    .activities-carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        height: auto;
+        margin: 0 auto 2em auto;
+        overflow: visible;
     }
 
     .carousel,
     .carousel-2 {
-        --carousel-item-width: 14em;
-        --carousel-item-height: 9em;
-        --carousel-item-gap: 1rem;
+        display: flex;
+        gap: 1em;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.5em 1em;
+        height: auto;
+        max-width: 100%;
+        mask-image: none;
+        margin: 0;
     }
 
-    .activities-carousel {
-        height: 22em;
+    .carousel::-webkit-scrollbar,
+    .carousel-2::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel > article,
+    .carousel-2 > article {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 16em;
+        min-width: 16em;
+        height: 11em;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        animation: none;
+        display: block;
+    }
+
+    .carousel > article img,
+    .carousel-2 > article img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.3);
+        bottom: -1.5em;
+    }
+
+    .carousel > article h3,
+    .carousel-2 > article h3 {
+        margin-left: 1.2em;
+        font-size: 1.1rem;
+        bottom: 0.3em;
     }
 
     .services-cards {
@@ -990,8 +1505,28 @@ a {
         align-items: center;
     }
 
+    #sub.description {
+        max-width: 100%;
+    }
+
+    .services {
+        padding: 4em 1.5em 8em 1.5em;
+    }
+
+    .services-content-container {
+        max-width: 95%;
+        padding: 2em 1.5em;
+    }
+
+    .services .header {
+        font-size: 2.6rem;
+    }
+
     .services-card-left, .services-card-right {
         max-width: 100%;
+        padding: 4.5em 2em 2.5em 2em;
+        margin-top: 2.5em;
+        min-width: 0;
     }
 
     .cta-content-container {
@@ -999,18 +1534,35 @@ a {
         padding: 3em 1.5em 8em 1.5em;
     }
 
+    .facilities {
+        margin: 3em auto 5em auto;
+        padding: 0 1em;
+    }
+
+    .facilities p {
+        max-width: 100%;
+        margin: 1.5em 0 2em 0;
+    }
+
     .facilities-images-container {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
     }
 
     .fic-top-row, .fic-bot-row {
-        flex-direction: column;
+        display: contents;
+    }
+
+    .fic-gym {
+        grid-column: 1 / -1;
     }
 
     .fic-gym, .fic-martial-arts,
     .fic-dance-studio, .fic-lockers, .fic-lavatories {
         max-width: 100%;
         height: 12em;
+        min-width: 0;
     }
 
     .foot-container {
@@ -1031,41 +1583,158 @@ a {
         font-size: 10px;
     }
 
+    #hero-content {
+        padding: 0 1em;
+    }
+
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3.6rem;
     }
 
     .hero span {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero {
+        gap: 1em;
+        padding: 4em 0 1em 0;
     }
 
     #hero-image-container {
-        transform: scale(0.5);
-        height: 20em;
+        max-width: 16em;
+        width: 85%;
+        aspect-ratio: 3 / 4;
+        transform: none;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #hero-image {
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .activities {
+        padding: 2.5em 0 1.5em 0;
+    }
+
+    .activities-carousel {
+        gap: 1em;
+        margin: 0 auto 1.5em auto;
     }
 
     .carousel,
     .carousel-2 {
-        --carousel-item-width: 12em;
-        --carousel-item-height: 7.5em;
-        --carousel-item-gap: 0.8rem;
+        padding: 0.3em 0.8em;
+        gap: 0.8em;
     }
 
-    .activities-carousel {
-        height: 18em;
+    .carousel > article,
+    .carousel-2 > article {
+        width: 14em;
+        min-width: 14em;
+        height: 9.5em;
+    }
+
+    .carousel > article img,
+    .carousel-2 > article img {
+        transform: scale(1.25);
+        bottom: -1.2em;
+    }
+
+    .carousel > article h3,
+    .carousel-2 > article h3 {
+        margin-left: 1em;
+        font-size: 1rem;
+    }
+
+    .services {
+        padding: 3em 1em 6em 1em;
+    }
+
+    .services-content-container {
+        max-width: 100%;
+        padding: 2em 1em;
+        border-radius: 2em;
+    }
+
+    .services .header {
+        font-size: 2.4rem;
+    }
+
+    .services-card-left, .services-card-right {
+        padding: 4em 1.5em 2em 1.5em;
+        margin-top: 2.5em;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #sub.description {
+        max-width: 100%;
+        font-size: 1.05rem;
+        margin: 0.5em auto;
+    }
+
+    .card-logo {
+        width: 5em;
+        height: 5em;
+        top: -2.2em;
+    }
+
+    .card-logo img {
+        width: 2.5em;
+        height: 2.5em;
+        margin: 1.2em auto;
     }
 
     .cta-content-container {
-        width: 95%;
-        padding: 2em 1em 6em 1em;
+        width: 92%;
+        max-width: none;
+        margin: 4em auto -2em auto;
+        padding: 2.5em 1.2em 6em 1.2em;
+        border-radius: 2em;
     }
 
     .facilities {
-        padding: 0 1em;
+        padding: 0 0.8em;
+        margin: 2em auto 4em auto;
+    }
+
+    .facilities-images-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6em;
+    }
+
+    .fic-top-row, .fic-bot-row {
+        display: contents;
+    }
+
+    .fic-gym {
+        grid-column: 1 / -1;
     }
 
     .fic-gym, .fic-martial-arts,
     .fic-dance-studio, .fic-lockers, .fic-lavatories {
         height: 10em;
+        min-width: 0;
+        border-radius: 1.2em;
+        border-width: 0.25em;
+    }
+
+    .footer {
+        padding: 3em 1em 2em 1em;
+    }
+
+    .foot-links {
+        gap: 1.8em;
+    }
+
+    .foot-header {
+        font-size: 1.3rem;
+    }
+
+    .footer-link, .foot-right a {
+        font-size: 1.05rem;
     }
 }
