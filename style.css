@@ -33,12 +33,26 @@ body.menu-open {
 .cta-button {
     display: inline-block;
     height: fit-content;
-    width: auto;
-    min-width: 9em;
+    width: 9em;
     padding: 0.4em 1.2em;
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FF1818;
+    border-radius: 0.3em;
+    white-space: nowrap;
+}
+
+.cta-button2 {
+    display: inline-block;
+    height: fit-content;
+    width: 60%;
+    padding: 0.4em 1.2em;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
     font-weight: 500;
     text-align: center;
     background-color: #FF1818;
@@ -238,6 +252,7 @@ body.menu-open {
     height: 100dvh;
     width: 100%;
     display: flex;
+    justify-content: center;
     background-image: url("assets/hero-bg.jpg");
     background-color: #C01414;
     background-repeat: no-repeat;
@@ -285,11 +300,25 @@ body.menu-open {
 #hero-image-container {
     position: absolute;
     right: 0;
-    top: 2.5em;
+    top: 13em;
+    margin-right: 6em;
     max-width: 40em;
     height: 45em;
     overflow: hidden;
-    transform: scale(0.85);
+    transform: scale(clamp(0.85, 1.5, 2));
+}
+
+@media (max-width: 1920px) {
+    #hero-image-container {
+        position: absolute;
+        right: 0;
+        top: 5em;
+        margin-right: 1em;
+        max-width: 40em;
+        height: 45em;
+        overflow: hidden;
+        transform: scale(clamp(0.85, 1.2, 2));
+    }
 }
 
 #hero-image {
@@ -314,21 +343,6 @@ body.menu-open {
     margin: 5em auto 10em auto;
     padding: 0 2em;
     z-index: 0;
-}
-
-.facilities::before {
-    content: '';
-    position: absolute;
-    top: -10em;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 20em);
-    background:
-        radial-gradient(ellipse at 20% 30%, rgba(192, 20, 20, 0.05) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 70%, rgba(30, 30, 30, 0.08) 0%, transparent 60%),
-        linear-gradient(180deg, #f8f8f8 0%, #ffffff 30%, #f5f5f5 70%, #ffffff 100%);
-    z-index: -1;
-    pointer-events: none;
 }
 
 .facilities p {
@@ -543,6 +557,7 @@ body.menu-open {
         height: 100%;
         transform: scale(1.4);
         bottom: -2em;
+        left: -0.2em;
     }
 
     & > article h3 {
@@ -1136,6 +1151,7 @@ body.menu-open {
     content: '\221A ';
     color: #C01414;
     font-weight: bold;
+    margin-right: 0.2em;
 }
 
 .comparison-table-wrapper {
