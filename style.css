@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Energy';
+  src: url('../fonts/Energy-Regular.woff2') format('woff2'),
+       url('../fonts/Energy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Energy';
+  src: url('../fonts/Energy-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -71,6 +86,7 @@
     --primary-color: #FF1818;
     --secondary-color: #C01414;
 }
+
 
 /* ========== RESET & BASE ========== */
 *,
@@ -470,6 +486,19 @@ body.menu-open {
 }
 
 @media (max-width: 1920px) {
+    #hero-image-container {
+        position: absolute;
+        right: 0;
+        top: 5em;
+        margin-right: 1em;
+        max-width: 40em;
+        height: 45em;
+        overflow: hidden;
+        transform: scale(clamp(0.85, 1.2, 2));
+    }
+}
+
+@media (max-width: 480px) {
     #hero-image-container {
         position: absolute;
         right: 0;
