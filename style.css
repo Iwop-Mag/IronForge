@@ -43,6 +43,19 @@ body.menu-open {
     background-color: #FF1818;
     border-radius: 0.3em;
     white-space: nowrap;
+    transition: all 0.1s ease;
+
+    &:hover {
+        background-color: #ff0000;
+        transform: scale(1.02);    
+        box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.6);
+    }
+
+    &:active {
+        background-color: #aa1414;
+        transform: scale(0.96);
+        box-shadow: 0 0.05em 0.5em rgba(0,0,0,0.6);
+    }
 }
 
 .cta-button2 {
@@ -58,6 +71,15 @@ body.menu-open {
     background-color: #FF1818;
     border-radius: 0.3em;
     white-space: nowrap;
+    transition: all 0.1s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
 }
 
 .header {
@@ -204,6 +226,15 @@ body.menu-open {
     font-size: 1.3em;
     background-color: #C01414;
     border-radius: 0.5em;
+    transition: all 0.1s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
 }
 
 /* ========== HAMBURGER MENU ========== */
