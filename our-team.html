@@ -143,5 +143,27 @@
             </footer>
         </div>
     </div>
+    <div id="popup" class="popup" role="dialog" aria-modal="true" aria-label="Join Iron Forge">
+        <div class="popup-content">
+            <button class="popup-close" aria-label="Close popup" onclick="closePopup()">&times;</button>
+            <div class="popup-header">
+                <h2>Start Forging Your Body</h2>
+                <p>Fill out the form below and we will get in touch within 24 hours.</p>
+            </div>
+            <form class="popup-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+                <select required>
+                    <option value="" disabled selected>Select a Program</option>
+                    <option value="basic">Basic - $29/mo</option>
+                    <option value="standard">Standard - $49/mo</option>
+                    <option value="premium">Premium - $79/mo</option>
+                    <option value="elite">Elite - $129/mo</option>
+                </select>
+                <button type="submit" class="popup-submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
