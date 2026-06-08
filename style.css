@@ -1807,11 +1807,12 @@ body.menu-open {
         aspect-ratio: 3 / 4;
         transform: none;
         height: auto;
-        margin: 0 auto;
+        margin: 8em auto -3em auto;
+        transform: scale(1.75);
     }
 
     #hero-image {
-        object-fit: contain;
+        object-fit: cover;
         object-position: center bottom;
     }
 
