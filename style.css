@@ -1,17 +1,10 @@
 @font-face {
   font-family: 'Energy';
-  src: url('../fonts/Energy-Regular.woff2') format('woff2'),
-       url('../fonts/Energy-Regular.woff') format('woff');
-  font-weight: 400;
+  src: url('./fonts/Energy.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Energy';
-  src: url('../fonts/Energy-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
 /* The Modal (background) */
 .modal {
@@ -1535,6 +1528,7 @@ body.menu-open {
         transform: scale(0.65);
         right: -5em;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -1780,6 +1774,9 @@ body.menu-open {
         gap: 2em;
         text-align: center;
     }
+    .foot-logo-container {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1940,5 +1937,8 @@ body.menu-open {
 
     .footer-link, .foot-right a {
         font-size: 1.05rem;
+    }
+    .foot-logo-container {
+        margin: 0 auto;
     }
 }
